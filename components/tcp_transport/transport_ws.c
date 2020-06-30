@@ -2,6 +2,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <sys/random.h>
+#define LOG_LOCAL_LEVEL ESP_LOG_VERBOSE
 #include "esp_log.h"
 #include "esp_transport.h"
 #include "esp_transport_tcp.h"
@@ -12,7 +13,7 @@
 
 static const char *TAG = "TRANSPORT_WS";
 
-#define DEFAULT_WS_BUFFER (1024)
+#define DEFAULT_WS_BUFFER (1500)
 #define WS_FIN            0x80
 #define WS_OPCODE_CONT    0x00
 #define WS_OPCODE_TEXT    0x01
